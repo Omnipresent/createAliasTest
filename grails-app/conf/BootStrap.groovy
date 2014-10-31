@@ -16,13 +16,11 @@ class BootStrap {
       Request req4 = new Request(type: "TypeD").save(failOnError: true)
 
        UserRequest.create(user1, req1,true)
-
        UserRequest.create(user1, req2, true)
        UserRequest.create(user2, req1, true)
        UserRequest.create(user3, req3, true)
        UserRequest.create(user4, req4, true)
        UserRequest.create(user1, req4, true)
-
 
     }
     def destroy = {

@@ -7,7 +7,13 @@ class RequestService {
     UserRequest.createCriteria().list() {
       createAlias("request","req")
       eq("user", user)
-      eq("req.type","Test")
+      /*eq("request.type","TypeA")*/
+      request {
+        eq ("type", "TypeA")
+      }
+      /*req {
+        eq ("type", "TypeA")
+      }*/
     }
   }
 }

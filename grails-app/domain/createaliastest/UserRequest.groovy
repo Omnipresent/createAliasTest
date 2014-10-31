@@ -6,6 +6,7 @@ class UserRequest implements Serializable{
     User user
     Request request
 
+    static hasOne = [user: User, request: Request]
     static mapping = {
         id composite: ['user', 'request']
         version false
