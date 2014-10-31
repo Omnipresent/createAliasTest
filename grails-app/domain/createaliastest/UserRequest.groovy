@@ -28,8 +28,7 @@ class UserRequest implements Serializable{
     }
 
     static UserRequest create (User user, Request request, boolean flush = true) {
-        def d = new UserRequest (user: user, request: request)
-                /*d.save(flush: flush)*/
+        def d = new UserRequest (user: user, request: request).save(flush: flush, insert: true)
     }
     static constraints = {
     }

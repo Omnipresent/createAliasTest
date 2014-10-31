@@ -10,10 +10,10 @@ class BootStrap {
       User user3 = new User(username: "Foo3", password: "Bar").save(failOnError: true)
       User user4 = new User(username: "Foo4", password: "Bar").save(failOnError: true)
 
-      Request req1 = new Request(type: "TypeA")
-      Request req2 = new Request(type: "TypeB")
-      Request req3 = new Request(type: "TypeC")
-      Request req4 = new Request(type: "TypeD")
+      Request req1 = new Request(type: "TypeA").save(failOnError: true)
+      Request req2 = new Request(type: "TypeB").save(failOnError: true)
+      Request req3 = new Request(type: "TypeC").save(failOnError: true)
+      Request req4 = new Request(type: "TypeD").save(failOnError: true)
 
        UserRequest.create(user1, req1,true)
 
